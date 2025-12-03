@@ -154,13 +154,13 @@ pipeline {
             }
         }
 
-        stage('Approval QA') {
-            steps {
-                script {
-                    input message: '¿Aprobar despliegue a QA?', ok: 'Sí, continuar'
-                }
-            }
-        }
+        // stage('Approval QA') {
+        //     steps {
+        //         script {
+        //             input message: '¿Aprobar despliegue a QA?', ok: 'Sí, continuar'
+        //         }
+        //     }
+        // }
 
         stage('[CD-QA] Set Image Tag in k8s.yml') {
             steps {
@@ -221,13 +221,13 @@ pipeline {
             }
         }
 
-        stage('Approval Production') {
-            steps {
-                script {
-                    input message: '¿Aprobar despliegue a Producción?', ok: 'Sí, continuar'
-                }
-            }
-        }
+        // stage('Approval Production') {
+        //     steps {
+        //         script {
+        //             input message: '¿Aprobar despliegue a Producción?', ok: 'Sí, continuar'
+        //         }
+        //     }
+        // }
 
         stage('[CD-PRD] Set Image Tag in k8s.yml') {
             steps {
