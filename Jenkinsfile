@@ -44,7 +44,7 @@ pipeline {
                     string(credentialsId: 'clientId',       variable: 'AZ_CLIENT_ID'),
                     string(credentialsId: 'clientSecret',   variable: 'AZ_CLIENT_SECRET'),
                     string(credentialsId: 'tenantId',       variable: 'AZ_TENANT_ID'),
-                    string(credentialsId: 'subscriptionId', variable: 'AZ_SUBSCRIPTION_ID')
+                    string(credentialsId: 'suscriptionId', variable: 'AZ_SUBSCRIPTION_ID')
                 ]) {
                     sh '''
                       echo ">>> Azure login..."
