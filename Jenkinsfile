@@ -49,9 +49,9 @@ pipeline {
                     sh '''
                       echo ">>> Azure login..."
                       az login --service-principal \
-                        --username $AZ_CLIENT_ID \
-                        --password $AZ_CLIENT_SECRET \
-                        --tenant $AZ_TENANT_ID
+                        --username="$AZ_CLIENT_ID" \
+                        --password="$AZ_CLIENT_SECRET" \
+                        --tenant="$AZ_TENANT_ID"
 
                       az account set --subscription $AZ_SUBSCRIPTION_ID
                     '''
