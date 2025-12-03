@@ -41,10 +41,10 @@ pipeline {
         stage('Azure Login') {
             steps {
                 withCredentials([
-                    string(credentialsId: 'azure-clientId',       variable: 'AZ_CLIENT_ID'),
-                    string(credentialsId: 'azure-clientSecret',   variable: 'AZ_CLIENT_SECRET'),
-                    string(credentialsId: 'azure-tenantId',       variable: 'AZ_TENANT_ID'),
-                    string(credentialsId: 'azure-subscriptionId', variable: 'AZ_SUBSCRIPTION_ID')
+                    string(credentialsId: 'clientId',       variable: 'AZ_CLIENT_ID'),
+                    string(credentialsId: 'clientSecret',   variable: 'AZ_CLIENT_SECRET'),
+                    string(credentialsId: 'tenantId',       variable: 'AZ_TENANT_ID'),
+                    string(credentialsId: 'subscriptionId', variable: 'AZ_SUBSCRIPTION_ID')
                 ]) {
                     sh '''
                       echo ">>> Azure login..."
